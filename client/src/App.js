@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import {Container, Row, Col, Button, Navbar, Nav, Form} from 'react-bootstrap';
+import {Container, Row, Col, Button, Navbar, Nav, Form, Card} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -65,6 +65,7 @@ function App() {
           </Navbar.Collapse>
         </Navbar>
       
+        <img src="https://github.com/jritter77/images-test/blob/main/donut_circle.png?raw=true"/>
       
         <Button onClick={makePost}>New Post</Button>
 
@@ -76,8 +77,18 @@ function App() {
 
 
 
-const Article = ({id, title, index}) => (
-  <div>id: {id}  title: {title}</div>
+const Article = ({id, title, description, price, image}) => (
+  <Card style={{ width: '18rem' }} style={{margin: "32px"}}>
+  <Card.Img variant="top" src="image" />
+  <Card.Body>
+    <Card.Title>{title}</Card.Title>
+    <Card.Text>
+      Some quick example text to build on the card title and make up the bulk of
+      the card's content.
+    </Card.Text>
+    <Button variant="primary">Go somewhere</Button>
+  </Card.Body>
+  </Card>
 )
 
 
